@@ -1,3 +1,5 @@
+// Probably one of the worst codes I wrote :)
+
 #include<iostream>
 #include"station.hpp"
 #include<vector>
