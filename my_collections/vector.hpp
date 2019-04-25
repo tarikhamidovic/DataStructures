@@ -181,7 +181,7 @@ class Vector {
       return pos;
     }
   private:
-    size_t cap_ = 0;
+    size_t cap_ = 10;
     size_t size_ = 0;
     T* ptr_ = nullptr;
     void realocate() {
