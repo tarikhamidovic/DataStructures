@@ -66,11 +66,11 @@ class Vector {
           return temp;
         }
         iterator operator+(int x) {
-          p_+= x;
+          p_ += x;
           return *this;
         }
         iterator operator-(int x) {
-          p_-=x;
+          p_ -= x;
           return *this;
         }
         bool operator==(iterator otherIterator) {
