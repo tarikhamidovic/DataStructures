@@ -10,7 +10,7 @@
 template<typename T>
 class Vector {
   public:
-    Vector() = default;
+    Vector() : ptr_{new T[cap_]} {}
     Vector(const Vector& otherVector) : cap_{otherVector.cap_}, size_{otherVector.size_}, ptr_{new T[cap_]} {
       std::copy(otherVector.ptr_, otherVector.ptr_ + otherVector.size_, ptr_);
     }
