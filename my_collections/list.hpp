@@ -1,4 +1,6 @@
+// Tarik Hamidović
 // Doubly linked list
+
 #ifndef _DOUBLYLIST_HPP_
 #define _DOUBLYLIST_HPP_
 
