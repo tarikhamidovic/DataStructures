@@ -1,5 +1,5 @@
 // Tarik Hamidović
-// Vector (array)
+// Vector
 
 #ifndef _VECTOR_HPP_
 #define _VECTOR_HPP_
