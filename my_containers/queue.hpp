@@ -1,3 +1,6 @@
+// Tarik Hamidovic
+// Queue
+
 #ifndef _QUEUE_HPP_
 #define _QUEUE_HPP_
 
