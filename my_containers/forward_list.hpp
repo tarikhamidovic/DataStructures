@@ -1,4 +1,4 @@
-// Tarik Hamidovic
+// Tarik Hamidović
 // Forward list
 
 #ifndef _FORWARD_LIST_HPP_
@@ -21,7 +21,9 @@ class forward_list {
   public:
     forward_list() = default;
     forward_list(std::initializer_list<T>);
-    forward_list(const forward_list& other) { copyList(other); }
+    forward_list(const forward_list& other) {
+      copyList(other);
+    }
     forward_list(forward_list&& other) : head_{other.head_}, tail_{other.tail_}, size_{other.size_} {
       other.head_ = other.tail_ = nullptr;
     }
