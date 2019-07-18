@@ -1,3 +1,6 @@
+// Tarik Hamidovic
+// Set (Binary Search Tree)
+
 #ifndef _SET_HPP_
 #define _SET_HPP_
 
