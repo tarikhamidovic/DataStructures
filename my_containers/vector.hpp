@@ -25,7 +25,9 @@ class vector {
     vector(const vector& other) : cap_{other.cap_}, size_{other.size_}, ptr_{new T[cap_]} {
       std::copy(other.ptr_, other.ptr_ + other.size_, ptr_);
     }
-    vector(vector&& other) : cap_{other.cap_}, size_{other.size_}, ptr_{other.ptr_} { other.ptr_ = nullptr; }
+    vector(vector&& other) : cap_{other.cap_}, size_{other.size_}, ptr_{other.ptr_} {
+      other.ptr_ = nullptr;
+    }
     vector& operator=(const vector&);
     vector& operator=(vector&&);
     ~vector() { delete [] ptr_; }
