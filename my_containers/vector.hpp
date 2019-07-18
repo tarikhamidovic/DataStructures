@@ -19,8 +19,12 @@ class vector {
 
   public:
     vector() : ptr_{new T[cap_]} {}
-    vector(std::initializer_list<T> iniList) : cap_{iniList.size()}, size_{iniList.size()}, ptr_{new T[cap_]} { std::copy(iniList.begin(), iniList.end(), ptr_); }
-    vector(const vector& other) : cap_{other.cap_}, size_{other.size_}, ptr_{new T[cap_]} { std::copy(other.ptr_, other.ptr_ + other.size_, ptr_); }
+    vector(std::initializer_list<T> iniList) : cap_{iniList.size()}, size_{iniList.size()}, ptr_{new T[cap_]} {
+      std::copy(iniList.begin(), iniList.end(), ptr_);
+    }
+    vector(const vector& other) : cap_{other.cap_}, size_{other.size_}, ptr_{new T[cap_]} {
+      std::copy(other.ptr_, other.ptr_ + other.size_, ptr_);
+    }
     vector(vector&& other) : cap_{other.cap_}, size_{other.size_}, ptr_{other.ptr_} { other.ptr_ = nullptr; }
     vector& operator=(const vector&);
     vector& operator=(vector&&);
