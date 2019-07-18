@@ -1,4 +1,4 @@
-// Tarik Hamidovic
+// Tarik Hamidović
 // Queue
 
 #ifndef _QUEUE_HPP_
@@ -18,8 +18,12 @@ class queue {
 
   public:
     queue() = default;
-    queue(const queue& other) { copyQueue(other); }
-    queue(queue&& other) : head_{other.head_}, tail_{other.tail_}, size_{other.size_} { other.head_ = other.tail_ = nullptr; }
+    queue(const queue& other) {
+      copyQueue(other);
+    }
+    queue(queue&& other) : head_{other.head_}, tail_{other.tail_}, size_{other.size_} {
+      other.head_ = other.tail_ = nullptr;
+    }
     queue& operator=(const queue&);
     queue& operator=(queue&&);
     ~queue() { deleteQueue(); }
