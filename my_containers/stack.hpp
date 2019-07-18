@@ -1,3 +1,6 @@
+// Tarik Hamidović
+// Stack
+
 #ifndef _STACK_HPP_
 #define _STACK_HPP_
 
