@@ -17,8 +17,12 @@ class stack {
 
   public:
     stack() = default;
-    stack(const stack& other) { copyStack(other); }
-    stack(stack&& other) : head_{other.head_}, size_{other.size_} { other.head_ = nullptr; }
+    stack(const stack& other) {
+      copyStack(other);
+    }
+    stack(stack&& other) : head_{other.head_}, size_{other.size_} {
+      other.head_ = nullptr;
+    }
     stack& operator=(const stack&);
     stack& operator=(stack&&);
     ~stack() { deleteStack(); }
