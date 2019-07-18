@@ -1,4 +1,4 @@
-// Tarik Hamidovic
+// Tarik Hamidović
 // Set (Binary Search Tree)
 
 #ifndef _SET_HPP_
@@ -23,8 +23,12 @@ class set {
   public:
     set() = default;
     set(std::initializer_list<T>);
-    set(const set& other) : size_{other.size_} { copySet(root_, other.root_); }
-    set(set&& other) : root_{other.root_}, size_{other.size_} { other.root_ = nullptr; }
+    set(const set& other) : size_{other.size_} {
+      copySet(root_, other.root_);
+    }
+    set(set&& other) : root_{other.root_}, size_{other.size_} {
+      other.root_ = nullptr;
+    }
     set& operator=(const set&);
     set& operator=(set&&);
     ~set() { deleteSet(root_); }
