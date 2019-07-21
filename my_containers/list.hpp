@@ -230,4 +230,12 @@ typename list<T>::iterator list<T>::insert(iterator position, const T& value) {
   return iterator(temp2 -> next_);
 }
 
+template<typename T>
+bool list<T>::empty() {
+  if (size_ == 0)
+    return true;
+  else
+    return false;
+}
+
 #endif
