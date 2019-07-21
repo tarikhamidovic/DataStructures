@@ -145,6 +145,7 @@ class list<T>::iterator : public std::iterator<std::bidirectional_iterator_tag, 
     }
     bool operator==(const iterator& other) { return p_ == other.p_; }
     bool operator!=(const iterator& other) { return p_ != other.p_; }
+    // To make the time complexity O(1) for insert and erase
     node* getp() { return p_; }
 };
 
