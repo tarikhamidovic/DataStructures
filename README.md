@@ -6,6 +6,6 @@ Everything I did for my Data Structures course during the semester, including a 
 - [x] Stack
 - [x] Queue
 - [x] Set / Binary search tree
-- [ ] Map
+- [x] Map
 - [ ] Heap
 - [ ] Unordered pap / Hash map
