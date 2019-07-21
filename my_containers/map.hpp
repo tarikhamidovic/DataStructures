@@ -1,3 +1,6 @@
+// Tarik Hamidović
+// Map
+
 #ifndef _MAP_HPP_
 #define _MAP_HPP_
 
