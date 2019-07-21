@@ -36,7 +36,7 @@ class set {
     iterator begin() { return iterator(root_); }
     iterator end() { return iterator(nullptr); }
     size_t size() { return size_; }
-    bool find(const T&);
+    iterator find(const T&);
     void insert(const T&);
     void erase(iterator);
     bool empty();
@@ -191,17 +191,17 @@ class set<T>::iterator : public std::iterator<std::bidirectional_iterator_tag, T
 };
 
 template<typename T>
-bool set<T>::find(const T& val) {
+typename set<T>::iterator set<T>::find(const T& val) {
   auto temp = root_;
   while (temp) {
     if (temp -> value_ == val) 
-      return true;
+      return iterator(temp);
     else if (temp -> value_ < val)
       temp = temp -> right_;
     else
       temp = temp -> left_;
   }
-  return false;
+  return end();
 }
 
 template<typename T>
