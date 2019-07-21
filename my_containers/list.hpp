@@ -118,7 +118,8 @@ template<typename T>
 class list<T>::iterator : public std::iterator<std::bidirectional_iterator_tag, T> {
   private:
     node* p_ = nullptr;
-    
+    friend class list;
+  
   public:
     iterator() = default;
     iterator(node* p) : p_{p} {}
@@ -145,8 +146,6 @@ class list<T>::iterator : public std::iterator<std::bidirectional_iterator_tag, 
     }
     bool operator==(const iterator& other) { return p_ == other.p_; }
     bool operator!=(const iterator& other) { return p_ != other.p_; }
-    // To make the time complexity O(1) for insert and erase
-    node* getp() { return p_; }
 };
 
 template<typename T>
@@ -204,7 +203,7 @@ typename list<T>::iterator list<T>::erase(iterator position) {
     pop_back();
     return end();
   }
-  auto temp = position.getp();
+  auto temp = position.p_;
   temp -> previous_ -> next_ = temp -> next_;
   temp -> next_ -> previous_ = temp -> previous_;
   auto ret = temp -> next_;
@@ -223,7 +222,7 @@ typename list<T>::iterator list<T>::insert(iterator position, const T& value) {
     push_front(value);
     return iterator(head_);
   }
-  auto temp = position.getp();
+  auto temp = position.p_;
   auto temp2 = temp -> previous_;
   temp2 -> next_ = new node(temp2, value, temp);
   temp -> previous_ = temp2 -> next_;
