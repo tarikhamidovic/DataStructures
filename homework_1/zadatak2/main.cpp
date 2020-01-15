@@ -1,5 +1,5 @@
 // Probably one of the worst codes I wrote...
-// Have fun reading this awful piece of work :)
+// Have fun :)
 
 #include<iostream>
 #include"station.hpp"
