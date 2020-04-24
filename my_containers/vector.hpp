@@ -6,7 +6,6 @@
 * Description:      STL-like vector implementation
 *****************************************************************************/
 
-
 #ifndef _VECTOR_HPP_
 #define _VECTOR_HPP_
 

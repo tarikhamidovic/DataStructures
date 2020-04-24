@@ -6,7 +6,6 @@
 * Description:      Queue implemented like a linked list
 *****************************************************************************/
 
-
 #ifndef _QUEUE_HPP_
 #define _QUEUE_HPP_
 

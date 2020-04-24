@@ -6,7 +6,6 @@
 * Description:      STL-like set, implemented like a binary search tree
 *****************************************************************************/
 
-
 #ifndef _SET_HPP_
 #define _SET_HPP_
 

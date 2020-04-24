@@ -6,7 +6,6 @@
 * Description:      Stack implemented like a linked list
 *****************************************************************************/
 
-
 #ifndef _STACK_HPP_
 #define _STACK_HPP_
 

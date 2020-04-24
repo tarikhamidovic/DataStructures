@@ -6,7 +6,6 @@
 * Description:      STL-like doubly linked list
 *****************************************************************************/
 
-
 #ifndef _LIST_HPP_
 #define _LIST_HPP_
 
